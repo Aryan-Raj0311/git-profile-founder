@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git-profile-founder</title>
+  </head>
+  <body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+
+    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl w-[450px] text-center">
+
+      <h1 class="text-3xl font-bold border-b border-gray-600 pb-3 mb-6">
+        Git Profile Founder 🚀
+      </h1>
+
+      <!-- Search Box -->
+      <input
+        type="text"
+        placeholder="Enter GitHub username"
+        class="w-full px-4 py-2 rounded-lg bg-gray-700 outline-none mb-4" id="user-input"
+      />
+
+      <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg w-full" id="searchbtn">
+        Search
+      </button>
+
+      <!-- Profile Card -->
+      <div class="card mt-6 hidden" id="card">
+        <img class="w-20 h-20 rounded-full mx-auto border-2 border-blue-500" id="avat" />
+        <h2 class="text-xl font-bold mt-2" id="naam">Name</h2>
+        <p class="text-gray-400" id="usernaam">@username</p>
+
+        <div class="stats flex justify-between mt-4 text-sm">
+          <p id="rep">Repos: 0</p>
+          <p id="follow">Followers: 0</p>
+          <p id="folling">Following: 0</p>
+        </div>
+      </div>
+
+      <!-- //Qr code  -->
+      <div id="qrcode" class="mt-4 flex justify-center"></div>
+    </div>
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <!-- //yeh ek script ki library hai jo qr banane ke kaam aati hai.. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </body>
+</html>
